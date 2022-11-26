@@ -44,12 +44,7 @@ public class Main {
                 out = num1 + num2;
                 break;
             case ("/"):
-                if (roman && num1 % num2 !=0){
-                    throw new Exception("not Roman answer");
-
-//                    System.out.println("error");
-//                    return;
-                }
+//
                 out = num1 / num2;
                 break;
             case ("-"):
