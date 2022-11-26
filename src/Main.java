@@ -23,6 +23,8 @@ public class Main {
         }
         HashMap<String, Integer> romanToArabik = new HashMap<>();
         romanToArabik.put("I", 1);
+        romanToArabik.put("II", 2);
+        romanToArabik.put("III", 3);
         romanToArabik.put("IV", 4);
         romanToArabik.put("V", 5);
         romanToArabik.put("VI", 6);
