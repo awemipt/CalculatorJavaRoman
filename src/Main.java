@@ -2,18 +2,24 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter expression to evaluate:");
         String expr = scanner.nextLine();
         expr = expr.trim();
+
+        try {Main.calc(expr);}
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    public static void calc(String input) throws Exception {
         int num1 = 0, num2 = 0;
         boolean roman = false;
         int out = 0;
-        String[] toEval = expr.split(" ");
+        String[] toEval = input.split(" ");
         if (toEval.length != 3) {
-            System.out.println("Wrong format");
-            return;
+            throw new Exception("not Roman answer");
         }
         HashMap<String, Integer> romanToArabik = new HashMap<>();
         romanToArabik.put("I", 1);
